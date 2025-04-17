@@ -21,12 +21,18 @@ header.section-1 {
   height: 100vh;
 }
 
+.section {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
 /* Styling for the animated background */
 .floating-bg {
   width: 150vw;
   height: 150vw;
   background-color: rgba(50, 230, 255, 0.8);
-  position: fixed;
+  position: absolute;
   top: -125vw;
   left: 50%;
   transform: translateX(-50%);
@@ -105,7 +111,7 @@ header.section-1 {
 
 .logo {
   position: absolute;
-  top: 25vw;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -129,7 +135,7 @@ header.section-1 {
 .section-2 {
   height: 100vh;
   width: 100%;
-  border: solid;
+  padding: 4rem;
 }
 
 .section-heading {
@@ -138,7 +144,7 @@ header.section-1 {
   text-shadow: 0.3rem 0.3rem 0.3rem #999;
   opacity: 0.5;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
   font-weight: weight;
   text-transform: uppercase;
 }
@@ -147,6 +153,9 @@ header.section-1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  height: 70%;
 }
 
 .customer {
@@ -160,6 +169,13 @@ header.section-1 {
   border-radius: 0.5rem;
   padding: 2rem;
   box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+}
+
+.customer:first-child {
+  align-self: flex-start;
+}
+.customer:last-child {
+  align-self: flex-end;
 }
 
 .customer img {
@@ -180,4 +196,14 @@ header.section-1 {
   color: #f08e0f;
 }
 
-.customer
+.customer-text {
+  font-size: 1.6rem;
+  line-height: 24px;
+  letter-spacing: 2px;
+  /* text-align: center; */
+  margin-bottom: 2rem;
+}
+
+.customer-name {
+  font-size: 2rem;
+}
