@@ -26,6 +26,7 @@ header.section-1 {
   width: 100%;
   margin: auto;
   height: 100vh;
+  padding: 4rem;
 }
 
 /* Styling for the animated background */
@@ -133,11 +134,7 @@ header.section-1 {
   }
 }
 
-.section-2 {
-  height: 100vh;
-  width: 100%;
-  padding: 4rem;
-}
+/* section 2 */
 
 .section-heading {
   font-size: 8rem;
@@ -220,6 +217,7 @@ header.section-1 {
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+  position: relative;
 }
 
 .team-member-card img {
@@ -255,4 +253,57 @@ header.section-1 {
   color: white;
   background-color: #f08e0f;
   border-radius: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.story-btn {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  border: none;
+  z-index: 10;
+}
+
+.story-btn::before {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.story {
+  background-color: rgba(253, 69, 69, 0.8);
+  position: absolute;
+  inset: 0;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: all 0.5s;
+}
+
+.story .story-heading {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+}
+
+.story .story-paragraph {
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 0.2rem;
+  line-height: 2.4rem;
 }
