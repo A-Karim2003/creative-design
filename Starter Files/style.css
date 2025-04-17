@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Monoton&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Bellota Text";
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+header.section-1 {
+  height: 100vh;
+}
+
+/* Styling for the animated background */
+.floating-bg {
+  width: 150vw;
+  height: 150vw;
+  background-color: rgba(50, 230, 255, 0.8);
+  position: fixed;
+  top: -125vw;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 45%;
+  animation: rotate 30s infinite;
+}
+
+.floating-bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 230, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 40%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.nav-bar {
+  border: solid;
+  position: relative;
+  z-index: 1;
+  top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-link {
+  font-size: 2.2rem;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 700;
+  border: solid;
+  width: 0;
+  word-wrap: break-word;
+}
