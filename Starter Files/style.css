@@ -18,16 +18,14 @@ html {
 body {
   overflow-x: hidden;
 }
-header.section-1 {
-  height: 100vh;
-}
 
 .section {
   max-width: 1440px;
   width: 100%;
-  margin: auto;
-  height: 100vh;
+  margin: 0 auto;
+  min-height: 100vh;
   padding: 4rem;
+  margin-bottom: 20px;
 }
 
 /* Styling for the animated background */
@@ -73,7 +71,6 @@ header.section-1 {
 .nav-bar {
   position: relative;
   z-index: 1;
-  top: 5rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -99,7 +96,7 @@ header.section-1 {
   position: absolute;
   z-index: 2;
   left: 50%;
-  top: 18vw;
+  top: 40%;
   transform: translateX(-50%);
   font-size: 8rem;
   font-family: "Monoton";
@@ -110,6 +107,8 @@ header.section-1 {
   border-radius: 1rem;
   white-space: nowrap;
   opacity: 0.9;
+
+  transition: all 1s;
 }
 
 .logo {
@@ -125,13 +124,21 @@ header.section-1 {
   text-shadow: 0.1rem 0.1rem 0.2rem #ddd, -0.1rem -0.1rem 0.2rem #ddd;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 980px) {
+  .floating-bg {
+    top: -100vw;
+    transition: all 1s;
+  }
+}
+@media (max-width: 788px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 660px) {
   .section-1-heading {
     font-size: 6rem;
-  }
-
-  .logo i {
-    font-size: 12rem;
   }
 }
 
@@ -262,7 +269,6 @@ header.section-1 {
 }
 
 .project-btn {
-  border: solid;
   width: fit-content;
   padding: 1rem 2rem;
   font-size: 1.6rem;
@@ -437,4 +443,36 @@ header.section-1 {
   letter-spacing: 0.2rem;
   color: #444;
   margin-top: 5rem;
+  text-align: center;
+}
+
+.up-btn {
+  width: 40px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #72e8ff;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .form-container img {
+    display: none;
+  }
+
+  .contact-form {
+    transform: rotateY(0);
+    transition: all 0.5s;
+  }
+
+  .contact-form:hover {
+    transform: rotateY(0) translateY(-20px);
+    box-shadow: 5rem 5rem 7rem #aaa;
+  }
 }
