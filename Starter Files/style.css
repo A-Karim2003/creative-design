@@ -24,9 +24,12 @@ body {
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
+  min-height: 100vh;
   padding: 4rem;
   margin-bottom: 20px;
 }
+
+.section .section1,
 
 /* Styling for the animated background */
 .floating-bg {
@@ -162,7 +165,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 6rem;
-  height: 70%;
+  min-height: 70vh;
 }
 
 .customer {
