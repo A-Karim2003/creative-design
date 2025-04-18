@@ -336,8 +336,104 @@ header.section-1 {
   line-height: 2.4rem;
 }
 
-/* Section 3 */
+/* Section 4 */
 
 .section-4 {
-  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  margin: auto;
+  background: #e5e9ff;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* prettier-ignore */
+  box-shadow: 0.3rem 0.3rem 0.4rem #ccc,
+            -0.1rem -0.1rem 0.4rem #ccc;
+
+  padding: 6rem 2rem;
+
+  perspective: 100rem;
+}
+
+.form-container img {
+  width: 55rem;
+  background-color: #72e8ff;
+  opacity: 0.8;
+  padding: 5rem;
+  box-shadow: -3rem 3rem 4rem #aaa;
+
+  transform: rotateY(20deg);
+  transition: all 0.5s;
+}
+
+.form-container img:hover {
+  transform: rotateY(20deg) translateY(-20px);
+  box-shadow: -5rem 5rem 7rem #aaa;
+}
+
+.contact-form {
+  width: 45rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 3rem 3rem 4rem #aaa;
+  transform: rotateY(-20deg);
+  transition: all 0.5s;
+}
+
+.contact-form:hover {
+  transform: rotateY(-20deg) translateY(-20px);
+  box-shadow: 5rem 5rem 7rem #aaa;
+}
+
+.contact-form input {
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-radius: 3rem;
+  border: none;
+  letter-spacing: 1px;
+  /* prettier-ignore */
+  box-shadow: inset 1px 1px 4px #ddd, 
+              inset -1px -1px 4px #ddd
+}
+
+.contact-form textarea {
+  min-height: 15rem;
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+
+  /* prettier-ignore */
+  box-shadow: 0.1rem 0.1rem 0.4rem #ccc,
+             -0.1rem -0.1rem 0.4rem #ccc;
+}
+
+.contact-form input[type="submit"] {
+  color: white;
+  background-color: #72e8ff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: #444;
+  margin-top: 5rem;
 }
